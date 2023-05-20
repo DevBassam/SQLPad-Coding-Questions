@@ -1,3 +1,5 @@
+-- Problem Link: https://sqlpad.io/questions/35/film-length-report/
+
 SELECT film_category, count(*)
 FROM (
 	SELECT CASE 
