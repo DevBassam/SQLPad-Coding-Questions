@@ -1,3 +1,4 @@
+-- Problem Link: https://sqlpad.io/questions/33/returning-customers/
 SELECT COUNT(DISTINCT customer_id)
 FROM rental
 WHERE EXTRACT(MONTH FROM rental_ts) = 5
