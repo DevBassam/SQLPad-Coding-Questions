@@ -9,7 +9,7 @@ inventory_film AS (
 	SELECT COUNT(DISTINCT film_id) AS count
 	FROM inventory
 	)
-SELECT CASE WHEN inventory_film.count > 0	THEN 'in stock'	END AS in_stock
+SELECT CASE WHEN inventory_film.count > 0 THEN 'in stock' END AS in_stock
 	,CASE WHEN inventory_film.count > 0 THEN inventory_film.count END AS count
 FROM inventory_film
 
