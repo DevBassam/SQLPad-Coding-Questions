@@ -1,4 +1,4 @@
---Problem Link: 
+--Problem Link: https://sqlpad.io/questions/94/Top-3-products-vs-bottom-3-products/
 
 WITH top AS(
 	SELECT product_id, SUM(unit_price_usd * qty)
