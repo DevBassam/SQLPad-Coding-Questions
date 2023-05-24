@@ -10,11 +10,11 @@ FROM (
 		,f.title
 		,f.length
 		,c.name
-		,ROW_NUMBER() OVER (
-			PARTITION BY c.name ORDER BY f.length
-			) AS row_num
+		,ROW_NUMBER() OVER (PARTITION BY c.name	ORDER BY f.length) AS row_num
 	FROM category AS c
-	INNER JOIN film_category AS fc ON c.category_id = fc.category_id
-	INNER JOIN film AS f ON f.film_id = fc.film_id
+	INNER JOIN film_category AS fc
+	ON c.category_id = fc.category_id
+	INNER JOIN film AS f
+	ON f.film_id = fc.film_id
 	) AS subquery
 WHERE subquery.row_num = 1
